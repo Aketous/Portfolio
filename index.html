@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Walid Aketous — Network & Security Engineer. Cisco CCNP, Fortinet NSE4, VMware VCP. Wireless, routing & switching, network security and virtualization." />
+  <meta name="author" content="Walid Aketous" />
+  <meta name="theme-color" content="#0a0e1a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Walid Aketous — Network & Security Engineer" />
+  <meta property="og:description" content="Cisco CCNP · Fortinet NSE4 · VMware VCP. Wireless, routing & switching, security and virtualization." />
+  <meta property="og:type" content="website" />
+
+  <title>Walid Aketous · Network &amp; Security Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='monospace'>%E2%9A%A1</text></svg>" />
+</head>
+<body>
+  <!-- Animated network canvas background -->
+  <canvas id="network-bg" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Progress bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__logo">
+      <span class="nav__logo-mark">WA</span>
+      <span class="nav__logo-text">walid<span class="accent">.aketous</span></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#certs">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="assets/Walid-Aketous-CV.pdf" class="nav__cta" download>
+      <span>Resume</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    </a>
+    <button class="nav__burger" id="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__inner">
+        <p class="hero__eyebrow reveal">
+          <span class="status-dot"></span> Available for opportunities · Marrakech, Morocco
+        </p>
+        <h1 class="hero__name reveal">Walid Aketous</h1>
+        <h2 class="hero__role reveal">
+          <span class="hero__role-static">I build &amp; secure</span>
+          <span class="hero__role-dynamic" id="typed"></span><span class="caret">|</span>
+        </h2>
+        <p class="hero__desc reveal">
+          Network &amp; Security Engineer specializing in enterprise <strong>Cisco</strong> infrastructure,
+          <strong>wireless design</strong>, <strong>Fortinet</strong> security, and <strong>VMware</strong> virtualization.
+          Turning complex networks into fast, reliable and secure systems.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#contact" class="btn btn--primary">
+            Get in touch
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/walid-aketous-1878401a1/" class="btn btn--ghost" id="linkedin-hero" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="hero__stats reveal">
+          <div class="stat"><span class="stat__num" data-count="4">0</span><span class="stat__label">Years experience</span></div>
+          <div class="stat"><span class="stat__num" data-count="9">0</span><span class="stat__label">Certifications</span></div>
+          <div class="stat"><span class="stat__num" data-count="3">0</span><span class="stat__label">Vendor stacks</span></div>
+          <div class="stat"><span class="stat__num" data-count="100" data-suffix="+">0</span><span class="stat__label">Devices deployed</span></div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <span class="section__index">01</span>
+        <h2 class="section__title">About me</h2>
+        <span class="section__line"></span>
+      </div>
+      <div class="about">
+        <div class="about__text reveal">
+          <p>
+            I'm a <strong>Network &amp; Security Engineer</strong> based in Marrakech, currently completing a
+            <strong>Professional Master's in Systems, Networks &amp; Security Engineering</strong> at ENSI Tangier.
+          </p>
+          <p>
+            Since 2021 I've worked at <strong>Axians–Cegelec</strong>, deploying and maintaining enterprise networks
+            end to end — from active/passive <strong>Wi-Fi site surveys</strong> with Ekahau, to configuring
+            <strong>Catalyst 9000</strong> switches and <strong>Catalyst 9100</strong> access points, hardening
+            networks with <strong>Fortinet firewalls &amp; SD-WAN</strong>, and virtualizing servers on
+            <strong>VMware ESXi</strong>.
+          </p>
+          <p>
+            I care about networks that are fast, resilient and secure by design — and I enjoy the puzzle of
+            optimizing coverage, performance and reliability for real users.
+          </p>
+          <div class="about__chips">
+            <span>📍 Marrakech, Morocco</span>
+            <span>🎓 Master's @ ENSI Tangier</span>
+            <span>🗣️ Arabic · French · English</span>
+          </div>
+        </div>
+        <div class="about__card reveal">
+          <div class="terminal">
+            <div class="terminal__bar">
+              <span></span><span></span><span></span>
+              <p class="terminal__title">walid@network:~</p>
+            </div>
+            <pre class="terminal__body"><code><span class="c-prompt">$</span> whoami
+<span class="c-out">walid_aketous</span>
+<span class="c-prompt">$</span> cat role.txt
+<span class="c-out">Network &amp; Security Engineer</span>
+<span class="c-prompt">$</span> show certifications --count
+<span class="c-out">9 active</span>
+<span class="c-prompt">$</span> show stack
+<span class="c-key">cisco</span>    : routing, switching, wireless
+<span class="c-key">fortinet</span> : firewall, sd-wan, nse4
+<span class="c-key">vmware</span>   : esxi, vcenter (vcp)
+<span class="c-key">tools</span>    : ekahau, airmagnet, milestone
+<span class="c-prompt">$</span> <span class="c-blink">_</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section__head reveal">
+        <span class="section__index">02</span>
+        <h2 class="section__title">Skills &amp; Stack</h2>
+        <span class="section__line"></span>
+      </div>
+      <div class="skills">
+        <article class="skill-card reveal">
+          <div class="skill-card__icon">🌐</div>
+          <h3>Routing &amp; Switching</h3>
+          <p>Design, deployment and maintenance of enterprise LAN.</p>
+          <ul class="tags">
+            <li>Catalyst 9500</li><li>9400</li><li>9300</li><li>9200</li><li>2960</li><li>VLANs</li><li>Cisco IOS</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-card__icon">📡</div>
+          <h3>Enterprise Wireless</h3>
+          <p>Active &amp; passive site surveys and AP deployment.</p>
+          <ul class="tags">
+            <li>C9130</li><li>C9124</li><li>C9115</li><li>Ekahau</li><li>AirMagnet</li><li>RF design</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-card__icon">🛡️</div>
+          <h3>Network Security</h3>
+          <p>Perimeter security, segmentation and secure WAN.</p>
+          <ul class="tags">
+            <li>Fortinet FortiGate</li><li>SD-WAN</li><li>NSE4</li><li>Firewall policy</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-card__icon">🖥️</div>
+          <h3>Virtualization</h3>
+          <p>Server virtualization and resource management.</p>
+          <ul class="tags">
+            <li>VMware ESXi</li><li>vCenter</li><li>VCP-DCV</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-card__icon">🎥</div>
+          <h3>Video Surveillance</h3>
+          <p>VMS design &amp; integration for security monitoring.</p>
+          <ul class="tags">
+            <li>Milestone</li><li>MCIT</li><li>IP cameras</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <div class="skill-card__icon">🐧</div>
+          <h3>Systems &amp; Tools</h3>
+          <p>Foundations that keep infrastructure running.</p>
+          <ul class="tags">
+            <li>Linux Essentials</li><li>Firmware mgmt</li><li>Documentation</li><li>Photoshop</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="soft-skills reveal">
+        <h3 class="soft-skills__title">Ways I work</h3>
+        <div class="soft-skills__list">
+          <span>Problem solving</span>
+          <span>Teamwork</span>
+          <span>Adaptability</span>
+          <span>Responsiveness</span>
+          <span>Punctuality</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="section__head reveal">
+        <span class="section__index">03</span>
+        <h2 class="section__title">Experience</h2>
+        <span class="section__line"></span>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-item__dot"></div>
+          <div class="tl-item__content">
+            <span class="tl-item__date">Oct 2022 — Present</span>
+            <h3 class="tl-item__role">Network Engineer <span class="tl-item__type">Full-time</span></h3>
+            <p class="tl-item__company">Axians–Cegelec · Marrakech</p>
+            <ul class="tl-item__points">
+              <li>Install &amp; configure Catalyst 9100 Wi-Fi access points (C9115, C9130, C9124) for efficient connectivity.</li>
+              <li>Deploy &amp; configure distribution/access switches (2960, 9200, 9300, 9407, 9500) for reliability and performance.</li>
+              <li>Run active &amp; passive site surveys with <strong>Ekahau</strong> to optimize coverage and performance.</li>
+              <li>Stand up <strong>Fortinet</strong> firewalls and a <strong>FortiGate SD-WAN</strong> to harden security and optimize WAN traffic.</li>
+              <li>Implement <strong>Milestone</strong> video-surveillance solutions and deploy <strong>VMware ESXi</strong> for virtualization.</li>
+              <li>Maintain network equipment and manage firmware lifecycle across the estate.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-item__dot"></div>
+          <div class="tl-item__content">
+            <span class="tl-item__date">Jun 2021 — Oct 2022</span>
+            <h3 class="tl-item__role">Network Technician <span class="tl-item__type">Contract</span></h3>
+            <p class="tl-item__company">Axians–Cegelec · Marrakech</p>
+            <ul class="tl-item__points">
+              <li>Performed active &amp; passive site surveys with <strong>AirMagnet</strong> to optimize wireless coverage.</li>
+              <li>Configured Cisco switches and deployed access points (C9115, C9130, C9124).</li>
+              <li>Deployed distribution/access switches (2960, 9200, 9300, 9407, 9500) and maintained Cisco equipment.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-item__dot"></div>
+          <div class="tl-item__content">
+            <span class="tl-item__date">Feb 2021 — May 2021</span>
+            <h3 class="tl-item__role">Network Technician <span class="tl-item__type">Internship</span></h3>
+            <p class="tl-item__company">Axians–Cegelec · Marrakech</p>
+            <ul class="tl-item__points">
+              <li>Conducted active &amp; passive site surveys with AirMagnet.</li>
+              <li>Carried out base configuration of Cisco switches.</li>
+              <li>Assisted in maintaining Cisco network equipment for optimal performance and reliability.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certs">
+      <div class="section__head reveal">
+        <span class="section__index">04</span>
+        <h2 class="section__title">Certifications</h2>
+        <span class="section__line"></span>
+      </div>
+      <div class="certs">
+        <article class="cert reveal" data-vendor="Cisco">
+          <div class="cert__vendor">CISCO</div>
+          <h3>CCNP Enterprise</h3>
+          <p>Cisco Certified Network Professional</p>
+          <span class="cert__date">Aug 2023</span>
+        </article>
+        <article class="cert reveal" data-vendor="Cisco">
+          <div class="cert__vendor">CISCO</div>
+          <h3>Enterprise Wireless Implementation</h3>
+          <p>Cisco Certified Specialist</p>
+          <span class="cert__date">Aug 2023</span>
+        </article>
+        <article class="cert reveal" data-vendor="Cisco">
+          <div class="cert__vendor">CISCO</div>
+          <h3>Enterprise Core</h3>
+          <p>Cisco Certified Specialist</p>
+          <span class="cert__date">Jul 2023</span>
+        </article>
+        <article class="cert reveal" data-vendor="VMware">
+          <div class="cert__vendor">VMWARE</div>
+          <h3>VCP — Data Center Virtualization</h3>
+          <p>VMware Certified Professional</p>
+          <span class="cert__date">Feb 2023</span>
+        </article>
+        <article class="cert reveal" data-vendor="Milestone">
+          <div class="cert__vendor">MILESTONE</div>
+          <h3>MCIT</h3>
+          <p>Milestone Certified Integration Technician</p>
+          <span class="cert__date">Jan 2023</span>
+        </article>
+        <article class="cert reveal" data-vendor="Fortinet">
+          <div class="cert__vendor">FORTINET</div>
+          <h3>NSE 4 — Security Professional</h3>
+          <p>Network Security Professional</p>
+          <span class="cert__date">Jul 2022</span>
+        </article>
+        <article class="cert reveal" data-vendor="Fortinet">
+          <div class="cert__vendor">FORTINET</div>
+          <h3>NSE 1·2·3 — Associate</h3>
+          <p>Network Security Associate</p>
+          <span class="cert__date">May 2022</span>
+        </article>
+        <article class="cert reveal" data-vendor="Cisco">
+          <div class="cert__vendor">CISCO</div>
+          <h3>CCNA Industrial 200-301</h3>
+          <p>Cisco Certified Network Associate</p>
+          <span class="cert__date">Jan 2022</span>
+        </article>
+        <article class="cert reveal" data-vendor="Linux">
+          <div class="cert__vendor">NDG</div>
+          <h3>Linux Essentials</h3>
+          <p>NDG Linux Essentials</p>
+          <span class="cert__date">Feb 2020</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="section__head reveal">
+        <span class="section__index">05</span>
+        <h2 class="section__title">Education</h2>
+        <span class="section__line"></span>
+      </div>
+      <div class="edu">
+        <div class="edu__item reveal">
+          <span class="edu__year">2024 — 2025</span>
+          <div>
+            <h3>Professional Master's — Systems, Networks &amp; Security Engineering</h3>
+            <p>ENSI · Tangier, Morocco</p>
+          </div>
+        </div>
+        <div class="edu__item reveal">
+          <span class="edu__year">2022 — 2023</span>
+          <div>
+            <h3>Professional Bachelor's — Systems, Networks &amp; Security Engineering</h3>
+            <p>Faculty of Sciences &amp; Techniques · Settat</p>
+          </div>
+        </div>
+        <div class="edu__item reveal">
+          <span class="edu__year">2018 — 2020</span>
+          <div>
+            <h3>Specialized Technician — Computer Networks</h3>
+            <p>ISTA Jbel Lakhder · Marrakech</p>
+          </div>
+        </div>
+        <div class="edu__item reveal">
+          <span class="edu__year">2015 — 2016</span>
+          <div>
+            <h3>Baccalaureate — Life &amp; Earth Sciences (SVT)</h3>
+            <p>Lycée Sahnoun · Marrakech</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--contact" id="contact">
+      <div class="contact reveal">
+        <span class="contact__eyebrow">06 — What's next</span>
+        <h2 class="contact__title">Let's build something <span class="accent">reliable</span>.</h2>
+        <p class="contact__desc">
+          Open to network &amp; security engineering roles. Whether it's a deployment, a Wi-Fi survey
+          or hardening your infrastructure — let's talk.
+        </p>
+        <div class="contact__grid">
+          <a href="mailto:walidaketous@gmail.com" class="contact__card">
+            <span class="contact__label">Email</span>
+            <span class="contact__value">walidaketous@gmail.com</span>
+          </a>
+          <a href="tel:+212625683876" class="contact__card">
+            <span class="contact__label">Phone</span>
+            <span class="contact__value">+212 625-683876</span>
+          </a>
+          <a href="https://www.linkedin.com/in/walid-aketous-1878401a1/" class="contact__card" id="linkedin-contact" target="_blank" rel="noopener">
+            <span class="contact__label">LinkedIn</span>
+            <span class="contact__value">Walid Aketous</span>
+          </a>
+          <a href="assets/Walid-Aketous-CV.pdf" class="contact__card" download>
+            <span class="contact__label">Resume</span>
+            <span class="contact__value">Download PDF</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Walid Aketous · Network &amp; Security Engineer</p>
+    <p class="footer__built">Built with ⚡ &amp; a love for clean topologies</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
